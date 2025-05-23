@@ -58,14 +58,14 @@ const teamMembers: TeamMember[] = [
     name: "Chithra Gowda",
     role: "Senior Manager",
     paragraph : "( UI And UX Designer )",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=300&h=300",
+    image: "./chitra.jpg",
     initials: "ER",
   },
   {
     name: "Neamatullah Meer",
     role: "Manager",
     paragraph : "( SEO  )",
-    image: "https://images.unsplash.com/photo-1721322800607-8c38375eef04?auto=format&fit=crop&w=300&h=300",
+    image: "nematullah.jpg",
     initials: "ER",
   },
 ];
