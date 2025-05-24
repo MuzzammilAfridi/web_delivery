@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
@@ -38,19 +39,19 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           {/* Logo */}
-          <a href="#" className="font-bold text-2xl">
+          <Link to="/" className="font-bold text-2xl">
             WebApp<span className="text-blue-600">Delivery</span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#" className="hover:text-blue-600 transition-colors font-medium">Home</a>
-            <a href="#services" className="hover:text-blue-600 transition-colors font-medium">Services</a>
-            <a href="#process" className="hover:text-blue-600 transition-colors font-medium">Process</a>
-            <a href="#team" className="hover:text-blue-600 transition-colors font-medium">Team</a>
-            <a href="#testimonials" className="hover:text-blue-600 transition-colors font-medium">Testimonials</a>
+            <Link to="/" className="hover:text-blue-600 transition-colors font-medium">Home</Link>
+            <Link to="/service" className="hover:text-blue-600 transition-colors font-medium">Services</Link>
+            <Link to="process" className="hover:text-blue-600 transition-colors font-medium">Process</Link>
+            <Link to="/teammates" className="hover:text-blue-600 transition-colors font-medium">Team</Link>
+            <Link to="/testimonials" className="hover:text-blue-600 transition-colors font-medium">Testimonials</Link>
             <Button asChild>
-              <a href="#contact">Contact Us</a>
+              <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
 

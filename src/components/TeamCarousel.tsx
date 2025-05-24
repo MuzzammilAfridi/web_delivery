@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Link } from "react-router-dom";
 
 interface TeamMember {
   name: string;
@@ -16,6 +17,7 @@ interface TeamMember {
   paragraph: string;
   image: string;
   initials: string;
+  profile : string;
 }
 
 const teamMembers: TeamMember[] = [
@@ -23,8 +25,9 @@ const teamMembers: TeamMember[] = [
     name: "Abu Shama",
     role: "Founder & CEO",
     paragraph : "( AI Engineer )",
-    image: "https://vui.unsplash.com/resize?height=256&quality=60&type=auto&url=https%3A%2F%2Fsearched-images.s3.us-west-2.amazonaws.com%2F68361213-112f-4262-8322-b1f7dfa6b488%3FX-Amz-Algorithm%3DAWS4-HMAC-SHA256%26X-Amz-Credential%3DAKIAQ4GRIA4Q4QHSYODJ%252F20250523%252Fus-west-2%252Fs3%252Faws4_request%26X-Amz-Date%3D20250523T014855Z%26X-Amz-Expires%3D86400%26X-Amz-SignedHeaders%3Dhost%26X-Amz-Signature%3D485c8f6c517f2489b7df0083012947f6bcc26319a12d24884b9885f1eef7090f&sign=l5ZJKuGB_Y7-qw-M70HfBBKq7uIPGe_TBUs8qMKpJe8" ,
+    image: "./abushama.jpg",
     initials: "SJ",
+    profile : "https://www.linkedin.com/in/abu-shama-1b1266222/"
   },
   {
     name: "Rameez",
@@ -32,6 +35,7 @@ const teamMembers: TeamMember[] = [
     paragraph : "( AI Engineer )",
     image: "rameez.jpg",
     initials: "MC",
+    profile : 'https://www.linkedin.com/in/ramij-raj-rahaman-ba9774131/'
   },
   {
     name: "Muzzammil Afridi",
@@ -39,6 +43,8 @@ const teamMembers: TeamMember[] = [
     paragraph : "( Full Stack Developer )",
     image: "./pic11.jpg",
     initials: "DW",
+    profile: "https://www.linkedin.com/in/muzzammil-afridi"
+
   },
   {
     name: "Aamina",
@@ -46,13 +52,32 @@ const teamMembers: TeamMember[] = [
     paragraph : "( Front-End Developer )",
     image: "ameena.jpg",
     initials: "ER",
+    profile : "https://www.linkedin.com/in/ameena-tazeen-m-69b906307/"
   },
   {
     name: "Aatika",
-    role: "Senior Manager",
+    role: "Co-Founder",
     paragraph : "( Front-End Developer )",
     image: "ateeka.jpg",
     initials: "ER",
+    profile: "https://www.linkedin.com/in/aatikamariam/"
+  },
+
+  {
+    name: "Arshad Iqbal",
+    role: "Co-Founder",
+    paragraph : "( Cloud Engineer )",
+    image: "arshad.jpg",
+    initials: "ER",
+    profile: "https://www.linkedin.com/in/arshad-iqbal-5828542a9/"
+  },
+  {
+    name: "Haleema Sadiya",
+    role: "Co-Founder",
+    paragraph : "( Full Stack Java Developer )",
+    image: "haleema.jpg",
+    initials: "ER",
+    profile : "https://www.linkedin.com/in/haleema-sadiya-b3a1032b2/"
   },
   {
     name: "Chithra Gowda",
@@ -60,6 +85,7 @@ const teamMembers: TeamMember[] = [
     paragraph : "( UI And UX Designer )",
     image: "./chitra.jpg",
     initials: "ER",
+    profile: ""
   },
   {
     name: "Neamatullah Meer",
@@ -67,6 +93,7 @@ const teamMembers: TeamMember[] = [
     paragraph : "( SEO  )",
     image: "nematullah.jpg",
     initials: "ER",
+    profile : ""
   },
 ];
 
@@ -91,7 +118,9 @@ const TeamCarousel = () => {
         >
           <CarouselContent>
             {teamMembers.map((member, index) => (
+            
               <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                    <a href={member.profile} target="_blank" rel="noopener noreferrer">
                 <Card className="border-none shadow-md">
                   <CardContent className="flex flex-col items-center p-6">
                     <Avatar className="h-32 w-32 mb-4">
@@ -100,8 +129,11 @@ const TeamCarousel = () => {
                     </Avatar>
                     <h3 className="font-semibold text-xl">{member.name}</h3>
                     <p className="text-gray-500">{member.role}</p>
+                    <p className="text-gray-500 text-[14px]">{member.paragraph}</p>
                   </CardContent>
                 </Card>
+              </a>
+
               </CarouselItem>
             ))}
           </CarouselContent>

@@ -66,16 +66,16 @@ const Contact = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">First Name</label>
-                        <Input placeholder="John" className="border-gray-200 focus:border-blue-500" />
+                        <Input placeholder="First name" className="border-gray-200 focus:border-blue-500" />
                       </div>
                       <div>
                         <label className="block text-sm font-medium text-gray-700 mb-2">Last Name</label>
-                        <Input placeholder="Doe" className="border-gray-200 focus:border-blue-500" />
+                        <Input placeholder="Last name" className="border-gray-200 focus:border-blue-500" />
                       </div>
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
-                      <Input type="email" placeholder="john@example.com" className="border-gray-200 focus:border-blue-500" />
+                      <Input type="email" placeholder="Enter your Email" className="border-gray-200 focus:border-blue-500" />
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 mb-2">Project Type</label>
