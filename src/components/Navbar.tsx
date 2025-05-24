@@ -45,15 +45,16 @@ const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <div className="hidden md:flex items-center space-x-8">
-            <Link to="/" className="hover:text-blue-600 transition-colors font-medium">Home</Link>
-            <Link to="/service" className="hover:text-blue-600 transition-colors font-medium">Services</Link>
-            <Link to="process" className="hover:text-blue-600 transition-colors font-medium">Process</Link>
-            <Link to="/teammates" className="hover:text-blue-600 transition-colors font-medium">Team</Link>
-            <Link to="/testimonials" className="hover:text-blue-600 transition-colors font-medium">Testimonials</Link>
+            <a href="#home" className="hover:text-blue-600 transition-colors font-medium">Home</a>
+            <a href="#services" className="hover:text-blue-600 transition-colors font-medium">Services</a>
+            <a href="#process" className="hover:text-blue-600 transition-colors font-medium">Process</a>
+            <a href="#team" className="hover:text-blue-600 transition-colors font-medium">Team</a>
+            <a href="#testimonials" className="hover:text-blue-600 transition-colors font-medium">Testimonials</a>
             <Button asChild>
-              <Link to="/contact">Contact Us</Link>
+            <a href="#contact">Contact Us</a>
             </Button>
-          </div>
+</div>
+
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
